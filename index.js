@@ -17,7 +17,7 @@ const validateCpf = (strCPF) => {
   return true
 }
 
-exports.tools =
+exports.anywhereTools =
   {
     validations: {
       validateEmail,
