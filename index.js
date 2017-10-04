@@ -19,5 +19,5 @@ const validateCpf = (strCPF) => {
 
 exports.validations = {
   validateEmail,
-  validateCpf
+  validateCPF
 }
