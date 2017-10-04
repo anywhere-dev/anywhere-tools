@@ -1,9 +1,8 @@
 const validateEmail = email => /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)
 
 const validateCpf = (strCPF) => {
-  let sum
-  let modulus
-  sum = 0
+  let sum = 0
+  let modulus = 0
 
   if (strCPF == '00000000000') { return false }
   for (let i = 1; i <= 9; i++) { sum += parseInt(strCPF.substring(i - 1, i)) * (11 - i) }
