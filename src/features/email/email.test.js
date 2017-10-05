@@ -1,4 +1,4 @@
-import validateEmail from './validate-Email'
+import EMAIL from './email'
 import assert from 'assert'
 
 const validEmails = [
@@ -14,14 +14,16 @@ const invalidEmails = [
   'invalid@email.1'
 ]
 
-describe('Email', () => {
-  describe('validateEmail()', () => {
+describe('Email ', () => {
+  describe('Validation()', () => {
+
     it('should validate a real Email', () => {
-      validEmails.map(validEmail => assert(validateEmail(validEmail) == true))
+      validEmails.map(EMAIL.validEmail => assert(validateEmail(validEmail) == true))
     })
 
     it('should invalidate a fake Email', () => {
-      invalidEmails.map(invalidEmail => assert(validateEmail(invalidEmail) == false))
+      invalidEmails.map(EMAIL.invalidEmail => assert(validateEmail(invalidEmail) == false))
     })
+
   })
 })
