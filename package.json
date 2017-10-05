@@ -1,6 +1,6 @@
 {
   "name": "anywhere-tools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "tools for validation and normalization",
   "main": "./dist/anywhere-tools.js",
   "scripts": {
