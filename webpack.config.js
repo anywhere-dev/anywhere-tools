@@ -19,13 +19,14 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options:  {
+        options: {
           presets: ['es2015']
         }
       }
     ],
   },
   resolve: {
+    extensions: ['', 'js'],
     modules: [
       path.join(__dirname, 'node_modules')
     ],
