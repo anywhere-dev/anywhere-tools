@@ -69,7 +69,7 @@ validateCNPJ = (CNPJ) => {
   return true
 }
 
-exports.validations = {
+export const validations = {
   validateEmail,
   validateCPF,
   validateCNPJ
