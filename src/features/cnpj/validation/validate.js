@@ -1,4 +1,4 @@
-const validateCNPJ = (cnpj) => {
+const validate = (cnpj) => {
   cnpj = cnpj.replace(/[^\d]+/g, '');
 
   if (cnpj == '') return false;
@@ -50,4 +50,4 @@ const validateCNPJ = (cnpj) => {
   return true
 }
 
-export default validateCNPJ
+export default validate

@@ -18,11 +18,11 @@ describe('Email ', () => {
   describe('Validation()', () => {
 
     it('should validate a real Email', () => {
-      validEmails.map(validEmail => assert(EMAIL.validateEmail(validEmail) == true))
+      validEmails.map(validEmail => assert(EMAIL.validate(validEmail) == true))
     })
 
     it('should invalidate a fake Email', () => {
-      invalidEmails.map(invalidEmail => assert(EMAIL.validateEmail(invalidEmail) == false))
+      invalidEmails.map(invalidEmail => assert(EMAIL.validate(invalidEmail) == false))
     })
 
   })

@@ -1,11 +1,11 @@
-import denormalizeCPF from './normalize/denormalize-cpf'
-import normalizeCPF from './normalize/normalize-cpf'
-import validateCPF from './validate/validate-cpf'
+import denormalize from './normalization/denormalize'
+import normalize from './normalization/normalize'
+import validate from './validation/validate'
 
 const CPF = {
-  denormalizeCPF,
-  normalizeCPF,
-  validateCPF
+  denormalize,
+  normalize,
+  validate
 }
 
 export default CPF

@@ -1,4 +1,4 @@
-const validateCPF = (strCPF) => {
+const validate = (strCPF) => {
   strCPF = strCPF.replace(/[^\d]+/g, '')
   let sum = 0
   let modulus = 0
@@ -16,4 +16,4 @@ const validateCPF = (strCPF) => {
   return true
 }
 
-export default validateCPF
+export default validate

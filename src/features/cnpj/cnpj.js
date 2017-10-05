@@ -1,11 +1,11 @@
-import denormalizeCNPJ from './normalize/denormalize-cnpj'
-import normalizeCNPJ from './normalize/normalize-cnpj'
-import validateCNPJ from './validate/validate-cnpj'
+import denormalize from './normalization/denormalize'
+import normalize from './normalization/normalize'
+import validate from './validation/validate'
 
 const CNPJ = {
-  denormalizeCNPJ,
-  normalizeCNPJ,
-  validateCNPJ
+  denormalize,
+  normalize,
+  validate
 }
 
 export default CNPJ

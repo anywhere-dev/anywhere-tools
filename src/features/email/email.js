@@ -1,7 +1,7 @@
-import validateEmail from './validate/validate-email'
+import validate from './validation/validate'
 
 const EMAIL = {
-  validateEmail
+  validate
 }
 
 export default EMAIL

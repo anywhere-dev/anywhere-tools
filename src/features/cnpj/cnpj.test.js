@@ -23,13 +23,13 @@ describe('CNPJ', () => {
 
     it('should validate a real CNPJ', () => {
       validCNPJs.map(({ normalized, denormalized }) => {
-        assert(CNPJ.validateCNPJ(normalized) == true)
-        assert(CNPJ.validateCNPJ(denormalized) == true)
+        assert(CNPJ.validate(normalized) == true)
+        assert(CNPJ.validate(denormalized) == true)
       })
     })
 
     it('should invalidate a fake CNPJ', () => {
-      invalidCNPJs.map(invalidCNPJ => assert(CNPJ.validateCNPJ(invalidCNPJ) == false))
+      invalidCNPJs.map(invalidCNPJ => assert(CNPJ.validate(invalidCNPJ) == false))
     })
 
   })
@@ -37,7 +37,7 @@ describe('CNPJ', () => {
   describe('Normalization', () => {
 
     it('should normalize a CNPJ', () => {
-      validCNPJs.map(({ denormalized, normalized }) => assert(CNPJ.normalizeCNPJ(denormalized) == normalized))
+      validCNPJs.map(({ denormalized, normalized }) => assert(CNPJ.normalize(denormalized) == normalized))
     })
 
   })

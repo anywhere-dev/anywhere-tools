@@ -22,13 +22,13 @@ describe('CPF', () => {
 
     it('should validate a real CPF', () => {
       validCPFs.map(({ normalized, denormalized }) => {
-        assert(CPF.validateCPF(normalized) == true)
-        assert(CPF.validateCPF(denormalized) == true)
+        assert(CPF.validate(normalized) == true)
+        assert(CPF.validate(denormalized) == true)
       })
     })
 
     it('should invalidate a fake CPF', () => {
-      invalidCPFs.map(invalidCPF => assert(CPF.validateCPF(invalidCPF) == false))
+      invalidCPFs.map(invalidCPF => assert(CPF.validate(invalidCPF) == false))
     })
 
   })
@@ -36,7 +36,7 @@ describe('CPF', () => {
   describe('Normalization', () => {
 
     it('should normalize a CPF', () => {
-      validCPFs.map(({ denormalized, normalized }) => assert(CPF.normalizeCPF(denormalized) == normalized))
+      validCPFs.map(({ denormalized, normalized }) => assert(CPF.normalize(denormalized) == normalized))
     })
 
   })
