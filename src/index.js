@@ -1,5 +1,5 @@
 import validations from './features/validations/'
 
-export default {
+module.exports = {
   validations
 }
