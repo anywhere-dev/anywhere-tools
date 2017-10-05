@@ -1,4 +1,5 @@
 const validateCPF = (strCPF) => {
+  strCPF = strCPF.replace(/[^\d]+/g, '')
   let sum = 0
   let modulus = 0
 
