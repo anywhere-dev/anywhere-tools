@@ -1,5 +1,5 @@
-import validations from './features/validations/'
+import validations from './features/validations/index'
 
-module.exports = {
+export {
   validations
 }

@@ -10,6 +10,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'anywhere-tools.js',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
