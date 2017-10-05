@@ -2,8 +2,9 @@
   "name": "anywhere-tools",
   "version": "1.0.1",
   "description": "tools for validation and normalization",
-  "main": "index.js",
+  "main": "./dist/anywhere-tools.js",
   "scripts": {
+    "start": "webpack --env=dev --progress --profile --colors --watch",
     "build": "webpack --env=prod --progress --profile --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,6 +26,7 @@
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.6.0"
   }

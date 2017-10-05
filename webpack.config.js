@@ -1,6 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
-//const UglifyJSPlugin = require("uglifyjs-webpack-plugin")
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin")
 
 module.exports = {
   context: path.join(__dirname, 'src'),
@@ -16,7 +16,10 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        loader: 'babel-loader',
+        options:  {
+          presets: ['es2015']
+        }
       }
     ],
   },
@@ -26,6 +29,6 @@ module.exports = {
     ],
   },
   plugins: [
-    //new UglifyJSPlugin()
+    new UglifyJSPlugin()
   ]
 }
