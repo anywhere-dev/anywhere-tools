@@ -2,7 +2,7 @@
 
 ## WHAT IS IT
 
-Basic tools that we use in our projects for validation, normalization and denormalization of CPF, CNPJ and EMAIL.
+Basic tools that we use in our projects for validation and formatting of CPF, CNPJ and EMAIL.
 
 
 ## HOW TO USE
