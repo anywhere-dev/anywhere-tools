@@ -3,11 +3,11 @@ import assert from 'assert'
 
 const validCPFs = [
   {
-    denormalized: '65912364810',
-    normalized: '659.123.648-10'
+    raw: '65912364810',
+    formatted: '659.123.648-10'
   },{
-    denormalized: '73423650419',
-    normalized: '734.236.504-19'
+    raw: '73423650419',
+    formatted: '734.236.504-19'
   }
 ]
 const invalidCPFs = [
@@ -21,9 +21,9 @@ describe('CPF', () => {
   describe('Validation', () => {
 
     it('should validate a real CPF', () => {
-      validCPFs.map(({ normalized, denormalized }) => {
-        assert(CPF.validate(normalized) == true)
-        assert(CPF.validate(denormalized) == true)
+      validCPFs.map(({ formatted, raw }) => {
+        assert(CPF.validate(formatted) == true)
+        assert(CPF.validate(raw) == true)
       })
     })
 
@@ -33,10 +33,10 @@ describe('CPF', () => {
 
   })
 
-  describe('Normalization', () => {
+  describe('Formatting', () => {
 
-    it('should normalize a CPF', () => {
-      validCPFs.map(({ denormalized, normalized }) => assert(CPF.normalize(denormalized) == normalized))
+    it('should format a CPF', () => {
+      validCPFs.map(({ raw, formatted }) => assert(CPF.format(raw) == formatted))
     })
 
   })

@@ -1,10 +1,10 @@
-import denormalize from './normalization/denormalize'
-import normalize from './normalization/normalize'
+import raw from './formatting/raw'
+import format from './formatting/format'
 import validate from './validation/validate'
 
 const CPF = {
-  denormalize,
-  normalize,
+  raw,
+  format,
   validate
 }
 

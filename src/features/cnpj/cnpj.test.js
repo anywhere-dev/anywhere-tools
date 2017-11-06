@@ -4,12 +4,12 @@ import CNPJ from './cnpj'
 
 const validCNPJs = [
   {
-    denormalized: '02003313000129',
-    normalized: '02.003.313/0001-29'
+    raw: '02003313000129',
+    formatted: '02.003.313/0001-29'
   },
   {
-    denormalized: '47461227000106',
-    normalized: '47.461.227/0001-06'
+    raw: '47461227000106',
+    formatted: '47.461.227/0001-06'
   }
 ]
 
@@ -22,9 +22,9 @@ describe('CNPJ', () => {
   describe('Validation', () => {
 
     it('should validate a real CNPJ', () => {
-      validCNPJs.map(({ normalized, denormalized }) => {
-        assert(CNPJ.validate(normalized) == true)
-        assert(CNPJ.validate(denormalized) == true)
+      validCNPJs.map(({ formatted, raw }) => {
+        assert(CNPJ.validate(formatted) == true)
+        assert(CNPJ.validate(raw) == true)
       })
     })
 
@@ -34,10 +34,10 @@ describe('CNPJ', () => {
 
   })
 
-  describe('Normalization', () => {
+  describe('Formatting', () => {
 
-    it('should normalize a CNPJ', () => {
-      validCNPJs.map(({ denormalized, normalized }) => assert(CNPJ.normalize(denormalized) == normalized))
+    it('should format a CNPJ', () => {
+      validCNPJs.map(({ raw, formatted }) => assert(CNPJ.format(raw) == formatted))
     })
 
   })
