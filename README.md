@@ -15,6 +15,6 @@ Just `npm install anywhere-tools` or `yarn add anywhere-tools` and then you can 
 import {CPF} from 'anywhere-tools'
 
 CPF.validate('561.559.244-30') //returns true because it's a valid CPF
-CPF.normalize('56155924430') //returns the formatted CPF
+CPF.format('56155924430') //returns the formatted CPF
 
 ```
