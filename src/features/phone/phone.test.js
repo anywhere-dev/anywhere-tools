@@ -4,14 +4,18 @@ import assert from "assert";
 const validPhones = [
   {
     raw: "47997535580",
-    formatted: "(47)99753-5580",
+    formatted: "(47) 99753-5580",
   },
   {
     raw: "51995412250",
-    formatted: "(51)99541-2250",
+    formatted: "(51) 99541-2250",
+  },
+  {
+    raw: "5195412250",
+    formatted: "(51) 9541-2250",
   },
 ];
-const invalidPhones = ["av234", "333333", "cs!$%TT23"];
+const invalidPhones = ["av234", "333333", "cs!$%TT23", "479915075555"];
 
 describe("PHONE", () => {
   describe("Validation", () => {
